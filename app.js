@@ -52,7 +52,7 @@
   }
 
   function ProductImage(props) {
-    return <img src={`../../../assets/${props.color}.jpg`} alt="Product Image" />;
+    return <img src={`assets/${props.color}.jpg`} alt="Product Image" />;
   }
 
   var ProductCustomizer = createReactClass({
@@ -73,7 +73,8 @@
     },
     handleColorChange: function(selectedColor) {
       this.setState({
-        sizes: window.Inventory.byColor[selectedColor]
+        sizes: window.Inventory.byColor[selectedColor],
+        color: selectedColor
       });
     },
 
